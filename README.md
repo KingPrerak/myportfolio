@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio — a modern, responsive website buil
 
 📌 Live Demo
 
-[🔗 View Live](#) <!-- prerakpatelportfolio.is-great.net-->
+[🔗 View Live](#) prerakpatelportfolio.is-great.net
 
 
 ## 📁 Project Structure
