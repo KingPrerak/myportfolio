@@ -1,0 +1,497 @@
+/* Navbar styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.navbar {
+  background: #111;
+  padding: 20px 40px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.navbar .logo span {
+  color: #00bcd4; /* Accent color similar to the demo */
+}
+
+.navbar .logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.navbar .social-icons a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.navbar .social-icons a:hover {
+  color: #00bcd4;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: absolute;   /* <-- IMPORTANT: make it absolute */
+  top: 50%;             /* vertical center */
+  left: 10%;            /* 10% from left edge */
+  transform: translateY(-50%); /* center on Y axis */
+  z-index: 1;
+  width: 50%;
+  max-width: 600px;
+  color: #fff;
+  text-align: left;     /* align text left */
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-content h1 span {
+  color: #00bcd4; /* Accent color */
+}
+
+.hero-content p {
+  margin: 10px 0 30px;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 12px 25px;
+  border: none;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #0097a7;
+}
+
+.hero-buttons .btn-outline {
+  background: transparent;
+  border: 2px solid #00bcd4;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+/* About Section */
+.about {
+  padding: 100px 40px;
+  background: #000000;
+  color: #eee;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1;
+  text-align: left;
+}
+
+.about-image img {
+  max-width: 400px;
+  
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+.about-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+.about-text .email {
+  color: #00bcd4;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-text .location {
+  font-size: 14px;
+  color: #aaa;
+}
+/* Resume & Skills Section */
+.resume {
+  padding: 100px 40px;
+  background: #0a0a0a;
+  color: #eee;
+}
+
+.resume .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #00bcd4;
+  text-align: center;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 50px;
+}
+
+.resume-card {
+  position: relative;
+  background: #161616;
+  padding: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  aspect-ratio: 1/1; /* Makes it a square */
+}
+
+.resume-card:hover {
+  transform: scale(1.05);
+  z-index: 6;
+}
+
+.resume-content:hover .resume-card {
+  transform: scale(0.95);
+}
+
+.resume-content:hover .resume-card:hover {
+  transform: scale(1.05);
+}
+
+.resume-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+
+.resume-card p,
+.resume-card li {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.resume-card ul {
+  padding-left: 20px;
+}
+
+.resume-card strong {
+  color: #fff;
+}
+
+/* If you want text to expand smoothly */
+.resume-card:hover p,
+.resume-card:hover li {
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+.projects-wrapper {
+  position: relative;
+}
+
+.projects-title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-size: 40px;
+  color: #00bcd4;
+  margin: 50px 0 20px;
+  font-weight: bold;
+}
+
+.projects-bg {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 90px;
+  right: 90px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.projects-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.projects-info {
+  color: #fff;
+  max-width: 400px;
+}
+
+.projects-info h2 {
+  font-size: 70px;
+  margin: 80px 0 10px;;
+}
+
+.projects-info p {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.projects-info .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.projects-cards {
+  position: absolute;
+  bottom: 140px; /* push up from bottom */
+  right: 30px;   /* align to left side */
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+  z-index: 4;
+}
+
+.project-card {
+  width: 180px;  /* larger than before */
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.project-card.active {
+  transform: scale(1.2);
+
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 40px;
+  background: #0a0a0a;
+  color: #eee;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin-left: 0;     /* stick left */
+  text-align: left;
+  padding-left: 40px; /* add padding if needed */
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #161616;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 2px solid #00bcd4;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  display: inline-block;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background: #0097a7;
+}
+
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 50px 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  color: #00bcd4;
+}
+
+.footer-logo p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px; /* or any space you like */
+}
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #00bcd4;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}

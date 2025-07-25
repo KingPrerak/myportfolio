@@ -1,0 +1,9 @@
+/* responsive.css - Responsive styles for the portfolio */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    nav {
+        display: block;
+    }
+}
