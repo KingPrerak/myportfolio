@@ -1,10 +1,13 @@
 # Prerak Patel — Personal Portfolio Website
+<img width="1902" height="949" alt="image" src="https://github.com/user-attachments/assets/482c2abf-1374-48a6-9415-9341fe233c6d" />
 
 Welcome to my personal developer portfolio — a modern, responsive website built with **PHP**, **HTML**, **CSS**, and a touch of custom JavaScript to showcase my projects, skills, and experience.
 
 📌 Live Demo
 
-[🔗 prerakpatelportfolio.is-great.net]#
+
+[🔗 View Live Portfolio](https://prerakpatelportfolio.is-great.net/)
+
 
 
 ## 📁 Project Structure
