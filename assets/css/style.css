@@ -1,4 +1,7 @@
-/* Navbar styling */
+/* -----------------------------------
+   General Styles (your existing)
+----------------------------------- */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,6 +9,7 @@ body {
   color: #fff;
 }
 
+/* Navbar */
 .navbar {
   background: #111;
   padding: 20px 40px;
@@ -24,7 +28,7 @@ body {
 }
 
 .navbar .logo span {
-  color: #00bcd4; /* Accent color similar to the demo */
+  color: #00bcd4;
 }
 
 .navbar .logo p {
@@ -59,7 +63,8 @@ body {
 .navbar .social-icons a:hover {
   color: #00bcd4;
 }
-/* Hero Section */
+
+/* Hero */
 .hero {
   position: relative;
   height: 100vh;
@@ -67,24 +72,23 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
 }
 
 .hero-content {
-  position: absolute;   /* <-- IMPORTANT: make it absolute */
-  top: 50%;             /* vertical center */
-  left: 10%;            /* 10% from left edge */
-  transform: translateY(-50%); /* center on Y axis */
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
   z-index: 1;
   width: 50%;
   max-width: 600px;
   color: #fff;
-  text-align: left;     /* align text left */
+  text-align: left;
 }
 
 .hero-content h1 {
@@ -93,7 +97,7 @@ body {
 }
 
 .hero-content h1 span {
-  color: #00bcd4; /* Accent color */
+  color: #00bcd4;
 }
 
 .hero-content p {
@@ -127,7 +131,8 @@ body {
   background: #00bcd4;
   color: #fff;
 }
-/* About Section */
+
+/* About */
 .about {
   padding: 100px 40px;
   background: #000000;
@@ -139,18 +144,17 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .about-image {
   flex: 1;
-  text-align: left;
+  text-align: right;
 }
 
 .about-image img {
-  max-width: 400px;
-  
+  max-width: 350px;
 }
 
 .about-text {
@@ -162,11 +166,13 @@ body {
   margin-bottom: 20px;
   color: #00bcd4;
 }
+
 .about-text h1 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #00bcd4;
 }
+
 .about-text .email {
   color: #00bcd4;
   font-weight: bold;
@@ -182,15 +188,17 @@ body {
   font-size: 14px;
   color: #aaa;
 }
-/* Resume & Skills Section */
+
+/* =================== Resume & Skills Section =================== */
+
 .resume {
-  padding: 100px 40px;
+  padding: 60px 10px;
   background: #0a0a0a;
   color: #eee;
 }
 
 .resume .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -203,23 +211,21 @@ body {
 
 .resume-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 .resume-card {
   position: relative;
   background: #161616;
-  padding: 40px;
-  border-radius: 12px;
+  padding: 15px;
+  border-radius: 15px;
   overflow: hidden;
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  aspect-ratio: 1/1; /* Makes it a square */
+  aspect-ratio: 1/1.4;  /* custom rectangle */
 }
 
 .resume-card:hover {
@@ -236,11 +242,27 @@ body {
 }
 
 .resume-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
   color: #00bcd4;
 }
 
+.skills-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 5px;
+}
+
+.skills-videos video {
+  flex: 1 1 40%;
+  max-width: 40%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+/* Text inside (if any) */
 .resume-card p,
 .resume-card li {
   overflow: hidden;
@@ -248,17 +270,24 @@ body {
 }
 
 .resume-card ul {
-  padding-left: 20px;
+  padding-left: 35px;
 }
 
 .resume-card strong {
   color: #fff;
 }
 
-/* If you want text to expand smoothly */
 .resume-card:hover p,
 .resume-card:hover li {
   overflow: visible;
+}
+
+/* Responsive for Mobile */
+/* Make sure they wrap nicely on small screens */
+@media (max-width: 1200px) {
+  .resume-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -267,12 +296,14 @@ body {
   }
 }
 
+
+/* Projects */
 .projects-hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  
 }
+
 .projects-wrapper {
   position: relative;
 }
@@ -300,7 +331,6 @@ body {
   overflow: hidden;
 }
 
-
 .projects-overlay {
   position: relative;
   z-index: 2;
@@ -319,7 +349,7 @@ body {
 
 .projects-info h2 {
   font-size: 70px;
-  margin: 80px 0 10px;;
+  margin: 80px 0 10px;
 }
 
 .projects-info p {
@@ -335,10 +365,11 @@ body {
   text-decoration: none;
   border-radius: 4px;
 }
+
 .projects-cards {
   position: absolute;
-  bottom: 140px; /* push up from bottom */
-  right: 30px;   /* align to left side */
+  bottom: 140px;
+  right: 30px;
   display: flex;
   gap: 40px;
   align-items: flex-end;
@@ -346,7 +377,7 @@ body {
 }
 
 .project-card {
-  width: 180px;  /* larger than before */
+  width: 180px;
   height: 200px;
   background-size: cover;
   background-position: center;
@@ -359,10 +390,9 @@ body {
 
 .project-card.active {
   transform: scale(1.2);
-
 }
 
-/* Contact Section */
+/* Contact */
 .contact {
   padding: 100px 40px;
   background: #0a0a0a;
@@ -383,11 +413,10 @@ body {
 
 .contact-form {
   max-width: 600px;
-  margin-left: 0;     /* stick left */
+  margin-left: 0;
   text-align: left;
-  padding-left: 40px; /* add padding if needed */
+  padding-left: 40px;
 }
-
 
 .form-group {
   margin-bottom: 20px;
@@ -430,6 +459,7 @@ body {
   background: #0097a7;
 }
 
+/* Footer */
 .footer {
   background: #111;
   color: #ddd;
@@ -438,7 +468,7 @@ body {
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
@@ -459,8 +489,9 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 20px; /* or any space you like */
+  gap: 20px;
 }
+
 .footer-links li {
   margin-bottom: 10px;
 }
@@ -494,4 +525,187 @@ body {
   color: #666;
   border-top: 1px solid #222;
   padding-top: 20px;
+}
+
+/* -----------------------------------
+   ✅ Mobile Responsiveness 
+----------------------------------- */
+@media (max-width: 768px) {
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-content {
+    width: 90%;
+    left: 5%;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .about-text {
+    flex: unset;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-bg {
+    left: 20px;
+    right: 20px;
+  }
+
+  .projects-info h2 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  .projects-cards {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 140px;
+    height: 160px;
+  }
+
+  .contact-form {
+    padding-left: 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* Experience Section */
+.experience {
+  padding: 100px 40px;
+  background: #0a0a0a;
+  color: #eee;
+}
+
+.experience .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  text-align: center;
+}
+
+.experience-summary {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid #00bcd4;
+  padding-left: 30px;
+  border-bottom: 2px solid #00bcd4;;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.timeline-left {
+  flex: 1;
+}
+
+.timeline-left h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #00bcd4;
+}
+
+.timeline-left .date {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #00bcd4;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  flex-shrink: 0;
+}
+
+.timeline-right {
+  flex: 2;
+}
+
+.timeline-right h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.timeline-right p {
+  margin: 10px 0 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+  }
+  .timeline-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .timeline-dot {
+    display: none;
+  }
 }
