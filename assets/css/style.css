@@ -150,7 +150,7 @@ body {
 
 .about-image {
   flex: 1;
-  text-align: right;
+  text-align: left;
 }
 
 .about-image img {
@@ -190,109 +190,71 @@ body {
 }
 
 /* =================== Resume & Skills Section =================== */
+/* === Hexagonal Skills Section === */
 
-.resume {
-  padding: 60px 10px;
-  background: #0a0a0a;
-  color: #eee;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 40px;
+  justify-items: center;
 }
 
-.resume .container {
-  max-width: 1400px;
-  margin: 0 auto;
+.skill-item {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  background: #161616;
+  clip-path: polygon(
+    50% 0%,
+    93% 25%,
+    93% 75%,
+    50% 100%,
+    7% 75%,
+    7% 25%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.resume h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.skill-item span {
+  display: block;
   color: #00bcd4;
+  font-size: 12px;
   text-align: center;
 }
 
-.resume-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.resume-card {
-  position: relative;
-  background: #161616;
-  padding: 15px;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  aspect-ratio: 1/1.4;  /* custom rectangle */
-}
-
-.resume-card:hover {
-  transform: scale(1.05);
-  z-index: 6;
-}
-
-.resume-content:hover .resume-card {
-  transform: scale(0.95);
-}
-
-.resume-content:hover .resume-card:hover {
-  transform: scale(1.05);
-}
-
-.resume-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #00bcd4;
-}
-
-.skills-videos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 5px;
-}
-
-.skills-videos video {
-  flex: 1 1 40%;
-  max-width: 40%;
-  border-radius: 8px;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-}
-
-/* Text inside (if any) */
-.resume-card p,
-.resume-card li {
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.resume-card ul {
-  padding-left: 35px;
-}
-
-.resume-card strong {
-  color: #fff;
-}
-
-.resume-card:hover p,
-.resume-card:hover li {
-  overflow: visible;
-}
-
-/* Responsive for Mobile */
-/* Make sure they wrap nicely on small screens */
-@media (max-width: 1200px) {
-  .resume-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .resume-content {
-    grid-template-columns: 1fr;
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-item {
+    width: 80px;
+    height: 90px;
+  }
+
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-item span {
+    font-size: 10px;
   }
 }
 
@@ -320,14 +282,18 @@ body {
 
 .projects-bg {
   position: absolute;
-  top: 40px;
-  bottom: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  top: 60px;
+  bottom: 60px;
   left: 90px;
   right: 90px;
   background-size: cover;
   background-position: center;
   transition: background-image 0.6s ease-in-out;
   border-radius: 20px;
+  border-left: 8px solid #00bcd4;
+  border-bottom: 8px solid #00bcd4;
   overflow: hidden;
 }
 
@@ -619,8 +585,9 @@ body {
 }
 
 .experience .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  
 }
 
 .experience h2 {

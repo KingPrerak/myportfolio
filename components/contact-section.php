@@ -23,7 +23,7 @@
       if (mail($to, $subject, $body, $headers)) {
         $success = true;
       } else {
-        echo "<p style='color: green;'>Error: Message sent Sucessfully.</p>";
+        echo "<p style='color: green;'>Sucess: Message sent Sucessfully.  May i not respond to you quickly - for the quick reply mail me personally on Patelprerak435@gmail.com  </p>";
       }
     }
 

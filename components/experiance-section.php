@@ -15,7 +15,7 @@
         <div class="timeline-right">
           <h4>Self-employed</h4>
           <p>Freelance Web Developer since 2024 — completed 25+ diverse projects for clients worldwide.
-      Notable projects include <strong>Clinic Web</strong>, <strong>My Hearing Date</strong>, <strong>Sahayak</strong>, and more.
+      Notable projects include <strong>Clinic Web</strong>, <strong>My Hearing Date</strong>, and more.
       Passionate about delivering high-quality solutions on time.</p>
         </div>
       </div>

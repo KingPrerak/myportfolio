@@ -1,66 +1,89 @@
 <section class="resume">
   <div class="container">
-    <h2>Skills</h2>
-    <div class="resume-content">
+    <h2 style="text-align: center; color: #00bcd4;">Skills</h2>
+    <p style="text-align: center; color:#00bcd4;">Here are some of the technologies I work with:</p>
+    <br/>
+    <div class="skills-grid">
 
-      <!-- Frontend Card -->
-      <div class="resume-card">
-        <h3>Frontend</h3>
-        <div class="skills-videos">
-          <video src="assets/images/HTML.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/CSS.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/JS.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/React.webm" autoplay loop muted playsinline></video>
-        </div>
+      <!-- Example Skill Item -->
+      <div class="skill-item">
+        <img src="assets/images/HTML.svg" alt="HTML">
+        <span>HTML</span>
       </div>
 
-      <!-- Backend Card -->
-      <div class="resume-card">
-        <h3>Backend</h3>
-        <div class="skills-videos">
-          <video src="assets/images/Nodejs.webm" autoplay loop muted playsinline></video>
-          <video src="assets/images/Php.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/Python.webm" autoplay loop muted playsinline></video>
-          <video src="assets/images/c#.mp4" autoplay loop muted playsinline></video>
-        </div>
+      <div class="skill-item">
+        <img src="assets/images/CSS.svg" alt="CSS">
+        <span>CSS</span>
       </div>
 
-      <!-- Database Card -->
-      <div class="resume-card">
-        <h3>Database</h3>
-        <div class="skills-videos">
-          <video src="assets/images/mongoDB.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/MySQL.webm" autoplay loop muted playsinline></video>
-          <video id="firebase-video" src="assets/images/firebase.webm" autoplay loop muted playsinline></video>
-        </div>
+      <div class="skill-item">
+        <img src="assets/images/javascript.svg" alt="JavaScript">
+        <span>JavaScript</span>
       </div>
 
-      <!-- Cloud & Tools Card -->
-      <div class="resume-card">
-        <h3>Cloud & Tools</h3>
-        <div class="skills-videos">
-          <video src="assets/images/Azure.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/Github.mp4" autoplay loop muted playsinline></video>
-          <video src="assets/images/VS-Code.mp4" autoplay loop muted playsinline></video>
-        </div>
+      <div class="skill-item">
+        <img src="assets/images/react.svg" alt="React">
+        <span>React</span>
       </div>
 
+      <div class="skill-item">
+        <img src="assets/images/Node.js_logo.svg" alt="Node.js">
+        <span>Node.js</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/php.svg" alt="PHP">
+        <span>PHP</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/python.svg" alt="Python">
+        <span>Python</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/csharp.svg" alt="C#">
+        <span>C#</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/mongoDB.svg" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/mysql.svg" alt="MySQL">
+        <span>MySQL</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/firebase.svg" alt="Firebase">
+        <span>Firebase</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/azure.svg" alt="Azure">
+        <span>Azure</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/git.svg" alt="Git">
+        <span>Git</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/docker.svg" alt="Docker">
+        <span>Docker</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/VS-code.svg" alt="VS Code">
+        <span>VS Code</span>
+      </div>
+
+      <div class="skill-item">
+        <img src="assets/images/github.svg" alt="Figma">
+        <span>GitHub</span>
     </div>
   </div>
 </section>
-
-
-
-<script>
-  // Slow down Firebase video
-  const firebaseVideo = document.getElementById('firebase-video');
-  firebaseVideo.playbackRate = 0.5;
-
-  // Slow down React video
-  const reactVideo = document.querySelector('video[src*="React.webm"]');
-  reactVideo.playbackRate = 0.5;
-
-  // Slow down all backend videos
-  const backendVideos = document.querySelectorAll('.resume-card:nth-child(2) .skills-videos video');
-  backendVideos.forEach(video => video.playbackRate = 0.5);
-</script>
