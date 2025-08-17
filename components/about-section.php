@@ -1,5 +1,5 @@
 <!-- components/about-section.php -->
-<section class="about">
+<section class="about about-section-hidden" id="about-section">
   <div class="container">
     <div class="about-image">
       <img src="assets/images/p.jpg" alt="Prerak Patel">
@@ -12,7 +12,28 @@
       </p>
       <p class="location">📍 Pindwara, Rajasthan</p>
     </div>
-    
-    
   </div>
 </section>
+
+<script>
+// Intersection Observer for About Section Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutSection = document.getElementById('about-section');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('about-section-hidden');
+                entry.target.classList.add('about-section-visible');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    });
+
+    if (aboutSection) {
+        sectionObserver.observe(aboutSection);
+    }
+});
+</script>
