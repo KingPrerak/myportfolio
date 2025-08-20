@@ -13,7 +13,7 @@
     </ul>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/prerak-patel-60a908219/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/KingPrerak" target="_blank">GitHub</a>
+      <a href="https://github.com/Patel-Prerak" target="_blank">GitHub</a>
     </div>
   </div>
 </nav>
